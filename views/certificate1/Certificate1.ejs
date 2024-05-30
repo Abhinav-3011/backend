@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .signature-temp {
+        /* margin-top: 50px; */
+        text-align: center;
+      }
+      
+      
+      .manager-temp,
+      .date-temp {
+        font-size: 20px;
+        color: #555;
+      }
+      
+      .certificate-temp {
+        width: 65%;
+        margin: 50px auto;
+        background-color: #f8f8f8;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        height: 60vh;
+        text-align: center;
+        height: 80vh;
+      }
+      
+      .heading-temp {
+        text-align: center;
+        font-size: 28px;
+        color: #333;
+        /* text-decoration-style :initial;*/
+        font-family: Georgia, 'Times New Roman', Times, serif;
+      }
+      
+      .achivement-temp {
+        height: 5vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+      }
+      
+      .content-temp {
+        margin-top: 30px;
+      }
+      
+      .name-temp {
+        text-align: center;
+        font-size: 24px;
+        color: #ff6f61;
+        font-family: 'Times New Roman', Times, serif;
+      }
+      
+      .details-temp,
+      .description-temp {
+        text-align: center;
+        font-size: 18px;
+        color: #555;
+      }
+      
+      .logo-temp {
+        display: block;
+        margin: 0 auto 20px; /* Center the logo and add some space below */
+        max-width: 100px; /* Set maximum width for the logo */
+      }
+      
+      .logsignature-temp {
+        display: block;
+        margin: 0 auto 20px;
+        /* max-width: 100px; Set maximum width for the logo */
+        width: 200px;
+      }
+      
+      .certificate-id-temp {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        margin-top: 10px;
+      }
+      
+      .certificate-id-temp:focus {
+        border-color: #333;
+        outline: none;
+      }
+      
+      .certificate-id-temp::placeholder {
+        color: #999;
+      }
+      
+      .qrcode-temp {
+        position: absolute;
+        left: 24%;
+        font-size: 1rem;
+        top: 60%;
+        height: 125px !important;
+      }
+      
+      @media (max-width: 768px) {
+        .certificate-temp {
+          width: 90%;
+        }
+      }
+      
+      .modal-content
+      {
+        height: 80vh;
+      }
+      .mr
+      {
+        color: green;
+      }
+      
+      /* this is for template image select */
+      
+      .image1,.image2
+      {
+        height: 25vh;
+        width: 100%;
+        background-color: red;
+        margin-top: 10px;
+         background-position: center;
+         background-repeat: no-repeat;
+         background-size: cover;
+         cursor: pointer;
+      }
+      .image1
+      {
+        background-image: url("./Two_image/Image1.jpg");
+      }
+      .image2{
+        background-image: url("./Two_image/Image2.jpg");
+        height: 40vh;
+      
+      }
+      
+      
+      
+      .outer-border{
+          width:800px; height:550px;  text-align:center;    margin-left: 21%;
+      
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
+      
+      .inner-dotted-border{
+          width:750px; height:500px; padding:20px; text-align:center; border: 5px solid #673AB7;border-style: dotted;
+      }
+      
+      .certification{
+          font-size:50px; font-weight:bold;    color: #663ab7;
+      }
+      
+      .certify{
+          font-size:20px;
+      }
+      
+      .green,.event{
+          font-size:30px;    color: green;
+      }
+      
+      .fs-30{
+          font-size:30px;
+      }
+      
+      .fs-20{
+          font-size:20px;
+      }
+      .qrcode
+      {
+          position: absolute;
+          
+          left: 15%;
+          font-size: 1rem;
+          top:60%;
+          height: 125px !important;
+      
+      }
+      .date
+      {
+          box-sizing: border-box;
+          position: absolute;
+          top: 70%;
+          left: 42%;
+      }
+      
+      
+      </style>
+</head>
+
+
+<body>
+    <div class="certificate-temp">
+        <img class="logo-temp" src="../../image//Logo.png" alt="Logo" />
+        <h1 class="heading-temp">Certificate of Achievement</h1>
+        <div class="achievement-temp">This Certificate is Issued To</div>
+        <div class="achievement-temp">
+          Mr/Ms: <span style="margin-left: 10px;" class="mr"><%= certificateData.Name %></span>
+          <span style="margin-left: 10px;" class="department"><%= certificateData.Department %></span>
+          <span style="margin-left: 10px;"> Department</span>
+        </div>
+        <div class="achievement-temp">
+          For Completing <span style="margin-left: 10px; color: green;" class="event"><%= certificateData.Event %></span>
+          <span style="margin-left: 10px;">with excellence & Declaration</span>
+        </div>
+   
+        <div class="signature-temp">
+          <p class="date-temp">Date: <%= certificateData.Timestamp  %></p>
+        </div>
+        <label for="certificate-id">Certificate ID: 98765567890</label>
+      </div>
+    
+      
+      
+</body>
+</html>
