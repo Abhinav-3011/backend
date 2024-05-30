@@ -33,7 +33,7 @@ app.post("/register", async (req, res) => {
     console.log(email, password, name);
 
     try {
-        let data = new Register({ name, password, email });
+        let data = new Register({ name:req.body.name, password:req.body.password, email:req.body.email });
         let save = await data.save();
         console.log(save);
         res.send("Save successful");
@@ -63,7 +63,8 @@ app.post("/login", async (req, res) => {
 app.post("/send_to_mail", (req, res) => {
  
 
-
+    console.log(req.body)
+     console.log(req.body.register_data[0])
      if(!req.body.data && req.bodyregister_data.length<=0)
         {
             res.send(false)
